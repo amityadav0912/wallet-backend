@@ -2,10 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend for expense tracker app",
-  "main": "index.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js "
   },
   "author": "Amit Yadav",
   "license": "ISC",

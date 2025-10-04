@@ -1,6 +1,6 @@
 import express from "express"
 import dotenv from "dotenv"
-import { initDB, sql } from './src/config/db.js'
+import { initDB, sql } from './config/db.js'
 
 dotenv.config()
 
@@ -11,8 +11,8 @@ app.use(rateLimiter)
 
 const PORT = process.env.PORT || 5001;
 
-import transactionRoute from './src/routes/transaction.route.js'
-import rateLimiter from "./src/middleware/rateLimiter.js";
+import transactionRoute from './routes/transaction.route.js'
+import rateLimiter from "./middleware/rateLimiter.js";
 
 app.use('/api/transactions', transactionRoute);   
 
