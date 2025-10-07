@@ -100,8 +100,8 @@ const getSummaryByUserId = async (req, res) =>{
         return res.status(200).json(
             {
                 balance : balanceResult[0].balance,
-                earning: earningResult[0].earnings,
-                expense: expenseResult[0].expenses
+                income: earningResult[0].earnings,
+                expenses: expenseResult[0].expenses
             }
         )
 
