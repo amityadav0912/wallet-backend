@@ -18,7 +18,7 @@ import job from './config/cron.js'
 app.use('/api/transactions', transactionRoute);  
 job.start() 
 
-app.length('api/health', (req, res)=>{
+app.get('api/health', (req, res)=>{
     return res.status(200).json(
         {
             "status": "OK"
