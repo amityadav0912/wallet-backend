@@ -18,7 +18,6 @@ const addTransaction = async (req, res) => {
                     VALUES (${user_id},${title},${amount},${category})
                     RETURNING *
         `;
-        console.log(transaction);
 
         return res.status(201).json(
             transaction[0]
@@ -95,7 +94,6 @@ const getSummaryByUserId = async (req, res) =>{
         const expenseResult = await sql`
         SELECT COALESCE(SUM(amount), 0) as expenses FROM transanctions WHERE user_id= ${userId} AND amount < 0 ;
         `
-        console.log(balanceResult)
 
         return res.status(200).json(
             {
